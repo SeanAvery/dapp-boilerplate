@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import SideNav from './SideNav'
-import App from '../components/App';
+
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+
+import SideNav from './SideNav'
+import App from '../components/App';
+import Wallet from './Wallet'
 
 export default class AppContainer extends Component {
   // componentWillMount() {
@@ -26,7 +29,10 @@ export default class AppContainer extends Component {
   render() {
     return (
       <MuiThemeProvider muiThem={getMuiTheme(darkBaseTheme)}>
-        <SideNav />
+        <div>
+          <SideNav />
+          <Wallet />
+        </div>
       </MuiThemeProvider>
 
     );
